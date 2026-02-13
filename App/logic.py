@@ -29,6 +29,7 @@ import os
 import time
 from DataStructures.List import array_list as lt
 # TODO Importar las librerías correspondientes para el manejo de pilas y colas
+from DataStructures.Queue import queue as q
 
 data_dir = os.path.dirname(os.path.realpath('__file__')) + '/Data/'
 
