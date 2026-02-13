@@ -77,3 +77,13 @@ def test_size():
 
     queue.dequeue(my_queue)
     assert queue.size(my_queue) == 2
+
+def new_queue():
+    queue = {
+        "elements": all.new_list()
+    }
+    return queue
+def enqueue(my_queue, element):
+    all.add_last (my_queue["elements"], element)
+    
+    
