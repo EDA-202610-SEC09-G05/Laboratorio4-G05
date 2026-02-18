@@ -28,8 +28,8 @@ import csv
 import os
 import time
 from DataStructures.List import array_list as lt
-# TODO Importar las librerías correspondientes para el manejo de pilas y colas
 from DataStructures.Queue import queue as q
+from DataStructures.Stack import stack as s
 
 data_dir = os.path.dirname(os.path.realpath('__file__')) + '/Data/'
 
@@ -57,8 +57,8 @@ def new_logic():
     catalog['tags'] = lt.new_list()
     catalog['book_tags'] = lt.new_list()
     # TODO Implementar la inicialización de la lista de asociación de libros y tags
-    catalog['books_to_read'] = None
-    catalog["book_sublist"] = None
+    catalog['books_to_read'] = lt.new_list()
+    catalog["book_sublist"] = s.new_stack()
     return catalog
 
 
@@ -74,7 +74,8 @@ def load_data(catalog):
     tag_size = load_tags(catalog)
     book_tag_size = load_books_tags(catalog)
     # TODO Cargar los datos de libros para leer
-    return books, authors, tag_size, book_tag_size, books_to_read
+    books_to_read_size = load_books_to_read(catalog)
+    return books, authors, tag_size, book_tag_size, books_to_read_size
 
 
 def load_books(catalog):
