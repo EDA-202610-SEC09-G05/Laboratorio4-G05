@@ -1,6 +1,7 @@
 
-from DataStructures.Stack import stack as stack
+from Stack import stack as stack
 from DataStructures.Utils.utils import handle_not_implemented
+
 
 def setup_stack():
     # Inicializa una pila vacía para pruebas
