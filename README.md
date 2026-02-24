@@ -28,8 +28,8 @@ Este repositorio forma parte del marco docente de estructura de datos y algoritm
 
 Los estudiantes editan esta sección para agregar sus nombres, correos electrónicos de Uniandes y especificar qué funcionalidad de proyecto implementarán.
 
-1. Roxana Soto - r.soto@uniandes.edu.co - 202510633 - Hice todo 
-2. Nombre del estudiante No. 2, Correo electrónico del estudiante No. 2 Uniandes, Funcionalidad propiedad del estudiante No. 2.
+1. Roxana Soto - r.soto@uniandes.edu.co - 202510633 
+2. Alejandro Arevalo, j.arevalog2@uniandes.edu.co, 202522587.
 3. Nombre del estudiante No. 3, Correo electrónico del estudiante No. 3 Uniandes, Funcionalidad propiedad del estudiante No. 3.
 
 [Volver al inicio](#laboratorio-4)

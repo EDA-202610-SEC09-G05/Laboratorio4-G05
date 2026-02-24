@@ -26,6 +26,8 @@
 
 import sys
 import App.logic as logic
+from DataStructures.Stack import stack as st
+from DataStructures.Queue import queue as q
 
 """
 La vista se encarga de la interacción con el usuario
@@ -65,8 +67,16 @@ def load_data(control):
 
 def print_books_to_read(results):
     # TODO Imprimir los libros por leer
-    pass
+    if results is None or st.is_empty(results):
+        print("El usuario no tiene libros por leer.")
+        return
 
+    print("\nLibros por leer:\n")
+
+    while not st.is_empty(results):
+        book = st.pop(results)
+        print("Book ID:", book["book_id"],
+              "| Título:", book["title"])
 
 def print_tests_results(queue_results, stack_results):
     """
@@ -84,7 +94,12 @@ def print_tests_results(queue_results, stack_results):
     print("\nTiempos de ejecución para Pila: \n")
 
     # TODO Imprimir los resultados de las pruebas de rendimiento de la pila
-
+    print("Tiempo de ejecución para push:",
+          f"{stack_results['push_time']:.3f}", "[ms]")
+    print("Tiempo de ejecución para top:",
+          f"{stack_results['top_time']:.3f}", "[ms]")
+    print("Tiempo de ejecución para pop:",
+          f"{stack_results['pop_time']:.3f}", "[ms]")
 
 # Se crea el controlador asociado a la vista
 control = new_logic()
@@ -122,7 +137,11 @@ def main():
             result = logic.get_user_position_on_queue(
                 control, int(user_id), int(book_id))
             # TODO Imprimir la posición del usuario en la cola
-
+            if result == 0:
+                print("El usuario no está en la cola para ese libro.")
+            else:
+                print("El usuario está en la posición:", result)
+        
         elif int(inputs[0]) == 4:
             size = input("Indique tamaño de la muestra: ")
             size = int(size)
